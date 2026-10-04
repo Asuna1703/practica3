@@ -19,7 +19,7 @@ class Producto
 }
 class Almacen
 {
-    List<Producto> productos = new List<Producto>{
+  Producto [] productos = {
         new Producto("Figura de gojo", "40251478", 1500),
         new Producto("Poster de hanako", "18654321", 100),
         new Producto("Llavero de kirito", "54987654", 250),
@@ -34,7 +34,7 @@ class Almacen
                 throw new Exception("El producto ya existe en el almacén.");
             }
         }
-        productos.Add(producto);
+  
         return producto;
     }
     public Producto ObtenerProducto(string codigo)
@@ -92,6 +92,7 @@ static class Program
             Console.WriteLine("Producto eliminado: " + producto4.Nombre);
             Producto producto5 = almacen.ObtenerProducto("18654321");
             Console.WriteLine("Producto obtenido: " + producto5.Nombre);
+
 
         }
         catch (Exception ex)
